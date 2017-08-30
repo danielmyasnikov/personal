@@ -52,3 +52,4 @@ sublime-gulp.log
 *.map
 
 config/database.yml
+public/_ignored
