@@ -55,3 +55,4 @@ config/database.yml
 public/_ignored
 public/scss
 
+public/node_modules/*
