@@ -2,11 +2,14 @@
 <!--
 
 Configure backend (Rails vs Sinatra)
-
 Setup blog
-Images for the services
-Configure spy menu
+Configure smooth-scroll
 Check with Vicky the designs
+=> Make "Your Online Store crafted reliably" bolder!
+
+Images for the services
+
+
 Check mobile version
 Get a recommendation from Arash (someone else)
 Write about yourself
@@ -15,6 +18,9 @@ Put details in the footer
 ENABLE FONTS AND JavaScripts
 
 Improve UX of the form
+VERY SIMPLE FORM :(
+Add colors to "So how does it all work"
+Make dissappearing footer (similar to link-down)
 
 -->
 
@@ -29,7 +35,7 @@ Improve UX of the form
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Your Tech Business Partner</title>
+  <title>Your Tech Business Partner with expertise Online Shopping Industry</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -42,10 +48,16 @@ Improve UX of the form
   <link rel="stylesheet" type="text/css" href="dist/app.min.css" />
 
   <!-- javascript -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="js/vendor/popover.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
+  <!-- FOR LOCAL DEV -->
+  <!--
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/vendor/popover.js"></script>
+  -->
+  <!-- END LOCAL DEV -->
+
+  <script src="node_modules/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="dist/theme.min.js"></script>
 </head>
 <body class="dm-themed">
@@ -67,22 +79,22 @@ Improve UX of the form
       <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <a href="blog" class="nav-link dropdown-toggle" data-toggle="dropdown">
               Publications
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <a data-scroll href="#services" class="nav-link">
               Services
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <a data-scroll href="#about-me" href="#" class="nav-link">
               About me
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link--rounded" href="docs/intro.html">Contact me</a>
+            <a data-scroll href="#contact-me" class="nav-link nav-link--rounded">Contact me</a>
           </li>
         </ul>
       </div>
@@ -97,9 +109,9 @@ Improve UX of the form
       <figure id="blur-dev-img" class="hero-bg blur-dev-img" style="display: block;"></figure>
     </div>
     <div class="section-content">
-      <div class="lockup content">
+      <div id="lockup" class="lockup content">
         <div id="headline" class="inner active animated fadeIn">
-          <h1>Your Online Store</br>crafted reliably</h1>
+          <h1><span class="uppercase"> Your Online Store</span></br><span class="spacedout">crafted reliably</span></h1>
         </div>
       </div>
       <div id="intro-wrapper" class="intro-wrapper content">
@@ -107,11 +119,11 @@ Improve UX of the form
           <div class="agency-intro">
             <div class="container">
               <h3>
-                RELIABILTY | CAPABILITY | RESPONSIVENESS
+                ecommerce solutions | b2b ecommerce | consultant services
               </h3>
               <hr>
               <p>
-                New and emerging technologies will make your website shine and satisfy an eye of your customer. We will lay foundation for your future confidence and prosperity. And improve performance of your business today.
+                Technological advantage will make your shop shine and satisfy an eye of your customer. We will lay foundation for your future confidence and prosperity. And improve performance of your business today.
               </p>
             </div>
           </div>
@@ -140,10 +152,10 @@ Improve UX of the form
   </div>
   -->
 
-  <div class="agency-portfolio">
+  <div class="agency-portfolio" id="services">
     <div class="container">
       <h2>
-        So How I can help you
+        How I can help you
       </h2>
 
       <div class="blog-cols-wrapper">
@@ -176,7 +188,7 @@ Improve UX of the form
                 <!-- 7 min read -->
               </div>
               <p class="post-description">
-                Read how my own eCommerce solution can help your business to scale and boost sales
+                Read how my own eCommerce solution can help your business to scale and sell online faster with lots of ecommerce templates available.
               </p>
             </div>
           </div>
@@ -319,7 +331,7 @@ Improve UX of the form
         <h3>Get a complete control</h3>
         <p>
           <!-- Your data is under new control -->
-          Traditional approach to building eCommerce systems assumes a standard way of building a store. Your data, your store and your business is unique and that's how it should be. Your store will have a complete personal technical approach. Custom solutions will wired to suite your business needs and satisfy complex operational compliences.
+          I will get a modern approach to develop your ecommerce website - your data, your store and your business is unique and that's how it should be. Your store will have a complete personal and technical foundation. Custom ecommerce solutions wire to suite your business needs and satisfy complex operational compliences.
         </p>
       </header>
       <section class="features">
@@ -328,10 +340,10 @@ Improve UX of the form
             <img src="images/icons/features-icon-ok.png" class="icon" />
             <section>
               <h4>
-                Custom solutions
+                Custom ecommerce solutions
               </h4>
               <p>
-                Having your own developer will allow you to develop the store of your dreams.
+                Having your own ecommerce developer will allow you to build and scale the online shopping experience to excite your customers.
               </p>
             </section>
           </div>
@@ -397,7 +409,7 @@ Improve UX of the form
               <span class="ion-ios-pricetag-outline"></span>
               Initial stage
             </span>
-            <span class="date float-right">Quick</span>
+            <span class="date float-right">Approx: 1-2 days</span>
           </footer>
         </div>
       </div>
@@ -406,10 +418,10 @@ Improve UX of the form
         <div class="news">
           <section>
             <h3>
-              Analysis
+              2. Pick up the solution
             </h3>
             <p>
-              After the phone call I need to analyse the issue and solutions for implementation.
+              After the phone call I need to analyse the issue and solutions for implementation. There are thousands available solutions on the market, I can pick the best that suits you or choose the one I have already built. Either it is a out of the box solution or a custom app, we will review all of them.
             </p>
           </section>
           <footer class="clearfix">
@@ -417,7 +429,7 @@ Improve UX of the form
               <span class="ion-ios-pricetag-outline"></span>
               Initial stage
             </span>
-            <span class="date float-right">Takes from 2-3 weeks</span>
+            <span class="date float-right">Approx: 2-3 weeks</span>
           </footer>
         </div>
       </div>
@@ -426,18 +438,16 @@ Improve UX of the form
         <div class="news">
           <section>
             <h3>
-              Pick up the solution
+              3. Roadmapping
             </h3>
-            <p>
-              There are thousands available solutions on the market, I can pick the best that suits you. Either it is a out of the box solution or a custom app, we will review all of them.
-            </p>
+            <p>... text here</p>
           </section>
           <footer class="clearfix">
             <span class="tag float-left">
               <span class="ion-ios-pricetag-outline"></span>
               Laying the foundation
             </span>
-            <span class="date float-right">Takes 1-2 days</span>
+            <span class="date float-right">Approx: 1-2 days</span>
           </footer>
         </div>
       </div>
@@ -446,10 +456,10 @@ Improve UX of the form
         <div class="news">
           <section>
             <h3>
-              Crafting the store
+              4. Crafting the store
             </h3>
             <p>
-              .... some text in here.
+              An iterative process for ecommerce website development. I'll setup your business with a progress dashboard.
             </p>
           </section>
           <footer class="clearfix">
@@ -457,7 +467,7 @@ Improve UX of the form
               <span class="ion-ios-pricetag-outline"></span>
               Construction
             </span>
-            <span class="date float-right">Depends on the project</span>
+            <span class="date float-right">Approx: Depends on the project</span>
           </footer>
         </div>
       </div>
@@ -466,10 +476,10 @@ Improve UX of the form
         <div class="news">
           <section>
             <h3>
-              Testing
+              5. Pre release Health Check
             </h3>
             <p>
-              The major works happens here
+              During the health check process, I run tests against the platform.
             </p>
           </section>
           <footer class="clearfix">
@@ -477,7 +487,7 @@ Improve UX of the form
               <span class="ion-ios-pricetag-outline"></span>
               Construction
             </span>
-            <span class="date float-right">Takes between 6-8 days</span>
+            <span class="date float-right">Approx: 6-8 days</span>
           </footer>
         </div>
       </div>
@@ -486,10 +496,10 @@ Improve UX of the form
         <div class="news">
           <section>
             <h3>
-              Marketing
+              6. Marketing
             </h3>
             <p>
-              Unless the website is marketed on the web, it will be hard for customers to find you. Let us techniques and driven roads to find your store.
+              Unless the website is marketed on the web, it will be hard for customers to find you. Let us techniques to place your store at the first page of Google search.
             </p>
           </section>
           <footer class="clearfix">
@@ -497,7 +507,7 @@ Improve UX of the form
               <span class="ion-ios-pricetag-outline"></span>
               Construction
             </span>
-            <span class="date float-right">Depends on the project</span>
+            <span class="date float-right">Approx: Depends on the project</span>
           </footer>
         </div>
       </div>
@@ -506,10 +516,10 @@ Improve UX of the form
         <div class="news">
           <section>
             <h3>
-              Launch
+              7. Launch
             </h3>
             <p>
-              The most exciting part of the process, to see happy customers and the shop owner happy.
+              Yes! See your happy customers and sell products or services online.
             </p>
           </section>
           <footer class="clearfix">
@@ -517,7 +527,7 @@ Improve UX of the form
               <span class="ion-ios-pricetag-outline"></span>
               Release
             </span>
-            <span class="date float-right">1 day</span>
+            <span class="date float-right">Approx: 1 day</span>
           </footer>
         </div>
       </div>
@@ -537,14 +547,16 @@ Improve UX of the form
 
   <hr>
 
-  <div class="spacial-features" data-scroll>
+  <div class="spacial-features" data-scroll id="about-me">
     <section class="container">
       <div class="row">
         <div class="col-12">
           <div class="header">
             <h2>About me</h2>
             <p>
-              So here I am. Mister Gentleman
+              Senior eCommerce consultant with expertise building large-scaled online platforms for over than 5 years.
+              <br>
+              <b>Here is my tech stack</b>
             </p>
           </div>
         </div>
@@ -583,7 +595,7 @@ Improve UX of the form
               Ruby
             </h3>
             <p class='text-center col-md-8 tech-stack' style="width:100%;">
-              Perhaps the nicest language of all time, with a heavy, secure and opinionated frameworks built on top of that such Rails (Ruby on Rails). Ruby takes the place in of the most popular languages in the world for engineering web apps.
+              Perhaps the nicest language of all time, with a heavy, secure and opinionated frameworks built on top of that such Rails (Ruby on Rails)Ruby is one of the most popular languages in the world for engineering online applications.
             </p>
           </div>
         </div>
@@ -608,7 +620,7 @@ Improve UX of the form
     <div class="container">
       <div class="quote">
         <span class="quote-mark">&#8220;</span>
-        Focus on creating and growing your projects and websites, and we‘ll always take care of spinning up new designs for your users and making sure they look great. Work with all types of great customers right out of the box!
+          ...waiting for a quote...
       </div>
       <div class="author">
         <img src="images/uifaces/9.jpg" />
@@ -623,7 +635,7 @@ Improve UX of the form
     </div>
   </div>
 
-  <div class="contact-me">
+  <div class="contact-me" id="contact-me">
     <h2 class="text-center">Contact me</h2>
     <div class="container">
       <!-- shake -->

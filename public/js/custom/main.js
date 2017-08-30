@@ -5,6 +5,9 @@ let mainImg    = document.getElementById('developer-image');
 let blurImg    = document.getElementById('blur-dev-img');
 let stickyWrap = document.getElementById('sticky-wrapper');
 
+let lock = document.getElementById('lockup');
+let intro = document.getElementById('intro-wrapper');
+
 const COMMAND = 91;
 const ENTER = 13;
 
@@ -18,13 +21,14 @@ window.setTimeout(function() {
 }, 1000);
 
 window.onscroll = function(e) {
+
   className = downIcn.className
   if (className.indexOf("bounceOut") < 0) {
     downIcn.className = className.concat(' bounceOut')
   }
 
-  if (window.pageYOffset > 720) {
-    var offset = window.pageYOffset - 720
+  if (window.pageYOffset > window.innerHeight) {
+    var offset = window.pageYOffset - window.innerHeight;
     stickyWrap.style.top = (-offset).toString().concat('px')
   } else if (window.pageYOffset > 200) {
     resetOffset(stickyWrap);
@@ -139,8 +143,10 @@ var clipSubmit = function(e) {
 
 let osSetup = function() {
   if (navigator.userAgent.includes('Mac')) {
-    let value = "Let's partner up (\u2318 + enter);"
+    let value = "Let's partner up (\u2318 + enter)"
     document.getElementById('submit').value = value;
   }
 };
 osSetup();
+
+var scroll = new SmoothScroll('a[href*="#"]');

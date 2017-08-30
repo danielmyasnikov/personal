@@ -6,7 +6,8 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "jquery": "^3.2.1",
-    "popper": "^1.0.0"
+    "popper": "^1.0.0",
+    "smooth-scroll": "^12.1.4"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",

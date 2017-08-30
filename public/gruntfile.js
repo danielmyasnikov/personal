@@ -9,9 +9,9 @@ module.exports = function(grunt) {
           compass: false
         },
         files: {
-          // 'dist/theme.min.css': ['scss/theme.scss'],
-          'dist/app.min.css':   ['scss/app.scss'],
-          'dist/bootstrap.min.css':   ['scss/bootstrap/bootstrap.css']
+          'dist/theme.min.css': ['scss/theme.scss'],
+          'dist/bootstrap.min.css':   ['scss/bootstrap/bootstrap.css'],
+          'dist/app.min.css':   ['scss/app.scss']
         }
       }
     },
@@ -28,7 +28,9 @@ module.exports = function(grunt) {
     },
     clean: {
       dist: [
-        'dist/app.min.css',
+        'dist/theme.min.css',
+        'dist/bootstrap.min.css',
+        'dist/app.min.css'
       ]
     }
   });
