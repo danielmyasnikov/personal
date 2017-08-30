@@ -50,3 +50,5 @@ sublime-gulp.log
 
 # Ignore CSS & Map File
 *.map
+
+config/database.yml
