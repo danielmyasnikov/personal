@@ -4,17 +4,11 @@ web store
 ecommerce website
 
 shopping cart
-sell online
+sell online x 1
 online business
-cheap online shopping
-e commerce definition
-best online shopping
-online shopping sites
-shopping online
-online shopping websites
 online store builder
 
-ecommerce website development
+ecommerce website development X 1
 ecommerce template X 1
 good online shopping sites
 sell products online
