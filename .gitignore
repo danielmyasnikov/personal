@@ -53,3 +53,6 @@ sublime-gulp.log
 
 config/database.yml
 public/_ignored
+public/scss
+
+node_modules/*
