@@ -29,19 +29,22 @@ window.onscroll = function(e) {
 
   if (window.pageYOffset > window.innerHeight) {
     var offset = window.pageYOffset - window.innerHeight;
-    stickyWrap.style.top = (-offset).toString().concat('px')
+
+        measure = (-offset).toString().concat('px')
+        stickyWrap.style.top = measure
+
   } else if (window.pageYOffset > 200) {
     resetOffset(stickyWrap);
     headline.className = "inner";
-    content.className = "inner active next-step-box";
+    content.className = "inner dm-active next-step-box";
     mainImg.className = "hero-bg developer-image";
-    blurImg.className = "hero-bg blur-dev-img active";
+    blurImg.className = "hero-bg blur-dev-img dm-active";
   } else {
     resetOffset(stickyWrap);
     stickyWrap.style.top = "0px";
-    headline.className = "inner active";
+    headline.className = "inner dm-active";
     content.className = "inner";
-    mainImg.className = "hero-bg developer-image active";
+    mainImg.className = "hero-bg developer-image dm-active";
     blurImg.className = "hero-bg blur-dev-img";
   }
 };
