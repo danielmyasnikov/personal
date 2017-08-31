@@ -5,11 +5,24 @@
 }
 
 $breakpoint-tablet: 768px;
+$breakpoint-desktop: 1400px;
+
+@media (max-width: $breakpoint-desktop) {
+  .custom-d-sm-md-lg-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: $breakpoint-desktop + 1px) {
+  .custom-d-xl-none {
+    display: none !important;
+  }
+}
 
 .dm-themed {
   h1 {
     font-family: $raleway;
-    font-size: 74px;
+    font-size: 56px;
     color: #fff;
     letter-spacing: 3px;
     font-weight: 400;
@@ -19,6 +32,11 @@ $breakpoint-tablet: 768px;
     -o-animation-delay: .1s;
     -ms-animation-delay: .1s;
     animation-delay: .1s;
+    text-align: center;
+  }
+
+  .supporting {
+    font-size: 36px !important;
   }
 
   @media (min-width: $breakpoint-tablet) {
@@ -328,4 +346,45 @@ $breakpoint-tablet: 768px;
       @include placeholder-focus;
     }
   }
+}
+
+.hero-original {
+  background: url('#{$imagesPath}/unsplash/michael-benz-189971.jpg');
+  background-size: cover;
+  background-position: center 0px;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.agency-intro {
+  h3, p { color: black; }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .agency-intro {
+    h3, p { color: white;
+  }
+}
 }
