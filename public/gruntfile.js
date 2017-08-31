@@ -13,6 +13,15 @@ module.exports = function(grunt) {
           'dist/bootstrap.min.css':   ['scss/bootstrap/bootstrap.css'],
           'dist/app.min.css':   ['scss/app.scss']
         }
+      },
+      app: {
+        options: {
+          style: 'compressed',
+          compass: false
+        },
+        files: {
+          'dist/app.min.css':   ['scss/app.scss']
+        }
       }
     },
     watch: {
@@ -23,13 +32,16 @@ module.exports = function(grunt) {
         files: [
           'scss/**/*.scss'
         ],
-        tasks: ['sass']
+        tasks: ['clean:app', 'sass:app']
       }
     },
     clean: {
       dist: [
         'dist/theme.min.css',
         'dist/bootstrap.min.css',
+        'dist/app.min.css'
+      ],
+      app: [
         'dist/app.min.css'
       ]
     }
@@ -44,12 +56,13 @@ module.exports = function(grunt) {
 
   // Register tasks
   grunt.registerTask('default', [
-    'clean',
-    'sass'
+    'clean:dist',
+    'sass:dist'
     // 'uglify'
   ]);
-  grunt.registerTask('dev', [
-    'watch'
-  ]);
+
+  grunt.registerTask('app', ['clean:app', 'sass:app']);
+
+  grunt.registerTask('dev', ['watch']);
 
 };

@@ -1,24 +1,13 @@
-# README
+### Grunt full:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+cd ${repo}/public
+grunt
+```
 
-Things you may want to cover:
+Grunt only app (cleans and compiles only app.scss):
+```
+cd ${repo}/public
+grunt app
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
