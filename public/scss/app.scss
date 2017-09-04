@@ -21,21 +21,9 @@ $breakpoint-desktop: 1400px;
 
 .dm-themed {
   h1 {
-    // font-family: $raleway;
-    // font-size: 56px;
     color: #fff;
-    // letter-spacing: 3px;
-    // font-weight: 400;
-
     text-shadow: 0 2px 1px rgba(0,0,0,0.11);
-
-    // -webkit-animation-delay: .1s;
-    // -moz-animation-delay: .1s;
-    // -o-animation-delay: .1s;
-    // -ms-animation-delay: .1s;
-    // animation-delay: .1s;
-
-    // text-align: center;
+    text-align: center;
   }
 
   .supporting {
@@ -44,6 +32,7 @@ $breakpoint-desktop: 1400px;
 
   @media (min-width: $breakpoint-tablet) {
     h1 {
+      text-align: right;
       // font-size: 78px;
       // letter-spacing: 2px;
       // font-weight: 600;
@@ -179,7 +168,7 @@ $breakpoint-desktop: 1400px;
 
 .section-hero .content {
     min-height: 100vh;
-    padding-top: 220px;
+    padding-top: 280px;
     text-align: left;
     padding-left: 20px;
     max-width: 1024px;
