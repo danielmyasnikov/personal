@@ -30,7 +30,10 @@ $breakpoint-desktop: 1400px;
     font-size: 36px !important;
   }
 
+  .nav-item a { text-align: right; }
+
   @media (min-width: $breakpoint-tablet) {
+    // .nav-item a { text-align: left; }
     h1 {
       text-align: left;
       // font-size: 78px;
@@ -389,4 +392,19 @@ $breakpoint-desktop: 1400px;
     h3, p { color: white;
   }
 }
+}
+
+.white-background {
+  .navbar {
+    background-color: #282F37 !important;
+    z-index: 100;
+    margin: 0;
+    position: relative;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    .navbar {
+      height: 170px;
+    }
+  }
 }
