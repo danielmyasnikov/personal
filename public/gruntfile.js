@@ -11,7 +11,8 @@ module.exports = function(grunt) {
         files: {
           'dist/theme.min.css': ['scss/theme.scss'],
           'dist/bootstrap.min.css':   ['scss/bootstrap/bootstrap.css'],
-          'dist/app.min.css':   ['scss/app.scss']
+          'dist/app.min.css':   ['scss/app.scss'],
+          'dist/thankyou.min.css':   ['scss/thankyou.scss'],
         }
       },
       app: {
@@ -20,7 +21,8 @@ module.exports = function(grunt) {
           compass: false
         },
         files: {
-          'dist/app.min.css':   ['scss/app.scss']
+          'dist/app.min.css':   ['scss/app.scss'],
+          'dist/thankyou.min.css':   ['scss/thankyou.scss']
         }
       }
     },
@@ -39,10 +41,12 @@ module.exports = function(grunt) {
       dist: [
         'dist/theme.min.css',
         'dist/bootstrap.min.css',
-        'dist/app.min.css'
+        'dist/app.min.css',
+        'dist/thankyou.min.css'
       ],
       app: [
-        'dist/app.min.css'
+        'dist/app.min.css',
+        'dist/thankyou.min.css'
       ]
     }
   });

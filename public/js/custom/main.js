@@ -144,12 +144,12 @@ var clipSubmit = function(e) {
   })
 };
 
-let osSetup = function() {
-  if (navigator.userAgent.includes('Mac')) {
-    let value = "Let's partner up (\u2318 + enter)"
-    document.getElementById('submit').value = value;
-  }
-};
-osSetup();
+// let osSetup = function() {
+//   if (navigator.userAgent.includes('Mac')) {
+//     let value = "Let's partner up (\u2318 + enter)"
+//     document.getElementById('submit').value = value;
+//   }
+// };
+// osSetup();
 
 var scroll = new SmoothScroll('a[href*="#"]');
