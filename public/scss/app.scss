@@ -408,3 +408,15 @@ $breakpoint-desktop: 1400px;
     }
   }
 }
+
+.agency-footer {
+  .fa-linkedin, .fa-instagram {
+    top: 6px;
+    left: 7px;
+  }
+}
+
+p {
+  font-size: 16px;
+  font-family: $varela;
+}
