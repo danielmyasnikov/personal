@@ -1,14 +1,13 @@
 Brochure:
 
-A bit about me
+A bit about me. Hi my name is Dan Myasnikov, I specialise in building ... and my focus is on XXX industry.
+This industry has <1st insight>, <2nd insight> and <3rd insight>. Considering your audience and I can suggest you my services that will enhance your business sales and increase online presence.
 
-My services:
-
-ecommerce
-websites
-system development
-
-troubleshooting
+1. ecommerce
+2. websites
+3. system development
+4. support
+5. marketing
 
 Projects I helped:
 
