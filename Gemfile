@@ -57,3 +57,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'httparty'
+
+# Added at 2017-09-12 12:53:03 +1000 by danmyasnikov:
+gem "appengine", "~> 0.4.2"
